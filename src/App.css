@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%; /* Explicitly set to 300vh */
-  width: 100vw; /* Full viewport width */
+  width: 100%; /* Full viewport width */
   background-color: red; /* For visualization */
   box-sizing: border-box; /* Ensure padding/borders don't add to height */
   overflow-x: hidden; /* Prevent horizontal overflow */
@@ -134,7 +134,7 @@ body {
   padding: 2em;
 }
 .main-content {
-  width: 100%;
+  width: 80%;
   overflow: hidden;
 }
 .drop-zone {
