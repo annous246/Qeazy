@@ -1,0 +1,181 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Explicitly set to 300vh */
+  width: 100vw; /* Full viewport width */
+  background-color: red; /* For visualization */
+  box-sizing: border-box; /* Ensure padding/borders don't add to height */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Allow vertical autoing if needed */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)
+    no-repeat fixed;
+}
+
+/* Ensure #root matches exactly 300vh with no overflow */
+#root {
+  height: 100%; /* Exact height, no min-height */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box; /* Prevent padding/borders from adding to height */
+  /* Prevent content from overflowing #root */
+  display: flex; /* Optional: Helps manage child content */
+  flex-direction: column; /* Optional: Stacks children vertically */
+}
+
+/* Constrain all direct children of #root to prevent overflow */
+.loading-cap {
+  position: fixed;
+  background-color: rgba(41, 41, 41, 0.863);
+  width: 20em;
+  height: 25em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.7em;
+  font-size: 1em;
+  font-weight: 100;
+  padding: 0.5em;
+}
+.loading {
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s all;
+}
+/* NAVBAR */
+.process-button {
+  background-color: transparent;
+  border: 0.08em solid #ffffff;
+  transition: 0.2s all;
+}
+.process-button:hover {
+  background-color: #ffffff;
+  color: rgb(36, 58, 97);
+  transition: 0.2s all;
+}
+.navbar {
+  display: flex;
+  width: 100%;
+  min-height: 5em;
+  align-items: center;
+  justify-content: space-between; /* spread logo + links */
+  padding: 0 2em; /* padding inside navbar */
+  border-bottom: 0.5px solid rgb(53, 53, 53);
+  color: white;
+}
+
+/* LOGO stays fixed size */
+.navbar-logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* LINKS should take remaining space */
+.navbar-links {
+  flex: 1; /* take remaining space */
+  display: flex;
+  justify-content: space-around; /* push links right */
+  align-items: center;
+  gap: 2em;
+}
+
+/* LINKS styling */
+.nav-link {
+  color: white;
+  font-size: large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.nav-link:hover {
+  color: #139decff;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* don’t force center vertically */
+  text-align: center;
+  min-height: calc(100vh - 5em); /* fill rest of screen minus navbar */
+  width: 100%;
+  padding: 2em;
+}
+.main-container-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* don’t force center vertically */
+  text-align: center;
+  min-height: calc(100vh - 5em); /* fill rest of screen minus navbar */
+  width: 50%;
+  padding: 2em;
+}
+.app-container-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* don’t force center vertically */
+  text-align: center;
+  min-height: calc(100vh - 5em); /* fill rest of screen minus navbar */
+  width: 100%;
+  padding: 2em;
+}
+.main-content {
+  width: 100%;
+  overflow: hidden;
+}
+.drop-zone {
+  border: 0.01em solid rgb(65, 63, 63);
+  border-radius: 0.5em;
+}
+#root {
+  text-align: center;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
