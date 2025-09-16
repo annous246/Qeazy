@@ -107,7 +107,7 @@ function DD({
     formData.append("questions", JSON.stringify(level * 10));
     formData.append("choices", JSON.stringify(level + 2));
     await axios
-      .post("http://localhost:3000/api/upload", formData, {
+      .post("https://qeazy-api.onrender.com/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
