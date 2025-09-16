@@ -130,7 +130,7 @@ function App() {
       {/* Nav Bar */}
       <nav className="navbar">
         <div className="navbar-logo">
-          <img src="src/assets/logo.png" width={100} />
+          <img src="./assets/logo.png" width={100} />
         </div>
         <div className="navbar-links">
           <Link to="/" className="nav-link">
