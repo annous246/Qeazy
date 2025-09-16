@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import DD from "./DD";
 import Parallax from "./paralax/Parallax"; // your new parallax component
+import logo from "./assets/logo.png";
 
 interface Question {
   id: number;
@@ -130,7 +131,7 @@ function App() {
       {/* Nav Bar */}
       <nav className="navbar">
         <div className="navbar-logo">
-          <img src="/assets/logo.png" width={100} />
+          <img src={logo} width={100} />
         </div>
         <div className="navbar-links">
           <Link to="/" className="nav-link">
