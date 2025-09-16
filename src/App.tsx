@@ -27,7 +27,7 @@ function App() {
     if (submitted) {
       if (selectedAnswers) {
         for (const ans in selectedAnswers) {
-          if (selectedAnswers[ans] == getAnswer(ans)) {
+          if (selectedAnswers[ans] == getAnswer(parseInt(ans))) {
             setMark((p) => p + 1);
           }
         }

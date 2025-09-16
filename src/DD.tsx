@@ -1,8 +1,8 @@
 import {
   useState,
   useCallback,
-  DragEvent,
-  ChangeEvent,
+  type DragEvent,
+  type ChangeEvent,
   useEffect,
 } from "react";
 import "./App.css";
@@ -134,7 +134,7 @@ function DD({
     );
 
     const results = await getResults(uploadedFiles);
-    await setQuestions((prev: any) => {
+    await setQuestions(() => {
       const r = results.map((res: any, index: number) => {
         let answers = [res.answer1, res.answer2, res.answer3];
         if (res.hasOwnProperty("answer4")) {

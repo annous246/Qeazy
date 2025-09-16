@@ -1,12 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Loading() {
   const container = useRef<any>(null);
-  const title = useRef<any>(null);
   const [phrase, setPhrase] = useState<string>(
     "Cooking up your quiz with AI magic..."
   );
-  let id: number | null = null;
+  let id: any | null = null;
   useEffect(() => {
     if (container.current) {
       console.log("here");

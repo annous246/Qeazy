@@ -1,4 +1,3 @@
-import { useState, useCallback, DragEvent, ChangeEvent } from "react";
 import "./Parallax.css";
 import Bg from "../bg/bg";
 
