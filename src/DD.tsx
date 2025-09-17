@@ -114,7 +114,10 @@ function DD({
       })
       .then(async (res) => {
         console.log(res);
-        await response.push(...res.data["mcqs"]);
+        alert(
+          "Only first " + res.data.total + " Pages were quizzed (beta version)"
+        );
+        await response.push(...res.data.ress["mcqs"]);
       })
       .catch((e) => console.log(e.message));
 
