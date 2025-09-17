@@ -107,7 +107,7 @@ function DD({
     formData.append("questions", JSON.stringify(level * 10));
     formData.append("choices", JSON.stringify(level + 2));
     await axios
-      .post("https://qeazy-api.onrender.com/api/upload", formData, {
+      .post("http://localhost:3000/api/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -135,7 +135,7 @@ function DD({
 
     const results = await getResults(uploadedFiles);
     await setQuestions(() => {
-      const r = results.map((res: any, index: number) => {
+      const r = results.map((res: any, resIndex: number) => {
         let answers = [res.answer1, res.answer2, res.answer3];
         if (res.hasOwnProperty("answer4")) {
           answers.push(res.answer4);
@@ -144,7 +144,7 @@ function DD({
           answers.push(res.answer5);
         }
         return {
-          id: index.toString(),
+          id: resIndex,
           correctAnswer: res.correct,
           text: res.question,
           options: answers,

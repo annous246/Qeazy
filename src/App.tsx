@@ -44,7 +44,7 @@ function App() {
   };
 
   function getAnswer(id: number) {
-    const ourQuestion: Question[] = questions.filter((q) => q.id === id);
+    const ourQuestion: Question[] = questions.filter((q) => q.id == id);
     return ourQuestion[0].correctAnswer - 1;
   }
 
