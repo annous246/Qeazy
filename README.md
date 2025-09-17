@@ -31,8 +31,6 @@ Upload a PDF file, and Qeazy will instantly generate <strong>Easy / Medium / Har
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=for-the-badge&logoColor=white)
 ![Azure AI](https://img.shields.io/badge/Azure%20AI-Inference-blue?logo=microsoftazure)
 
-(soon on [![Google Play Store](https://img.shields.io/badge/Google_Play-414141?logo=google-play&logoColor=white)](#) )
-
 ---
 
 ## ✨ Features
